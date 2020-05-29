@@ -1,0 +1,69 @@
+﻿@{
+    ViewBag.Title = "About";
+}
+
+@section stylesx{
+    @Styles.Render("~/Content/test-less-1.less")
+
+    <style>
+        h1 {
+            color: red;
+        }
+
+        p {
+            color: blue;
+            font-size: 20px;
+        }
+    </style>
+}
+
+@section Scripts {
+    @Scripts.Render("~/Content/test-js-1.js")
+    <script>//alert('xxx');</script>
+}
+
+
+
+<h2>@ViewBag.Title.</h2>
+<h3>@ViewBag.Message</h3>
+
+<p>Use this area to provide additional information.</p>
+
+<div class="table">
+    @Html.Raw(ViewBag.Tb1)
+</div>
+
+<div class="table-each">
+    <table class="table">
+        <tr>
+            <th>
+                Id
+            </th>
+            <th>
+                NameInThai
+            </th>
+            <th>
+                Manage
+            </th>
+        </tr>
+
+        @foreach (var item in ViewBag.Dtr1)
+        {
+            <tr>
+                <td>
+                    @item["Id"]
+                </td>
+                <td>
+                    @item["NameInThai"]
+                </td>
+                <td>
+                    @Html.ActionLink("Edit", "Edit", new { id = item["Id"] }) |
+                    @Html.ActionLink("Details", "Details", new { id = item["Id"] }) |
+                    @Html.ActionLink("Delete", "Delete", new { id = item["Id"] })
+                </td>
+            </tr>
+        }
+
+    </table>
+</div>
+

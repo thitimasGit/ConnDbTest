@@ -1,0 +1,52 @@
+﻿@model TestConnDbCommand.Models.Provinces
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Provinces</h4>
+    <div>SS Timeout: @Session.Timeout</div>
+    @Request.Cookies["member"]["user"]
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Id)
+        </dt>
+
+        <dd>
+            @ViewBag.Dr["Id"]
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Code)
+        </dt>
+
+        <dd>
+            @ViewBag.Dr["Code"]
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NameInThai)
+        </dt>
+
+        <dd>
+            @ViewBag.Dr["NameInThai"]
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NameInEnglish)
+        </dt>
+
+        <dd>
+            @ViewBag.Dr["NameInEnglish"]
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = ViewBag.Dr["Id"] }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

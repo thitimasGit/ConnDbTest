@@ -1,0 +1,53 @@
+﻿@model IEnumerable<TestConnDbCommand.Models.Provinces>
+
+@{
+    ViewBag.Title = "Provinces";
+}
+
+@section stylesx{
+    @Styles.Render("~/Content/test-less-1.less")
+}
+
+    <h2>Provinces</h2>
+
+    <div>SS Timeout: @Session.Timeout</div>
+
+    @Html.Raw(ViewBag.RsTest)
+
+    <p>
+        @Html.ActionLink("Create New", "Create")
+    </p>
+
+    <div class="table-each">
+        <table class="table">
+            <tr>
+                <th>
+                    Id
+                </th>
+                <th>
+                    NameInThai
+                </th>
+                <th>
+                    Manage
+                </th>
+            </tr>
+
+            @foreach (var item in ViewBag.Dtr1)
+            {
+                <tr>
+                    <td>
+                        @item["Id"]
+                    </td>
+                    <td>
+                        @item["NameInThai"]
+                    </td>
+                    <td>
+                        @Html.ActionLink("Edit", "Edit", new { id = item["Id"] }) |
+                        @Html.ActionLink("Details", "Details", new { id = item["Id"] }) |
+                        @Html.ActionLink("Delete", "Delete", new { id = item["Id"] })
+                    </td>
+                </tr>
+            }
+
+        </table>
+    </div>
