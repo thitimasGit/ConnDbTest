@@ -128,6 +128,7 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\EftController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ProvincesController.cs" />
     <Compile Include="Global.asax.cs">
@@ -217,6 +218,8 @@
     <Content Include="Views\Provinces\Details.cshtml" />
     <Content Include="Views\Provinces\Edit.cshtml" />
     <Content Include="Views\Provinces\Index.cshtml" />
+    <Content Include="Views\Eft\Index.cshtml" />
+    <Content Include="Views\Eft\IndexSub.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

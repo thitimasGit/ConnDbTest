@@ -89,6 +89,7 @@ namespace TestConnDbEf.Controllers
                 return RedirectToAction("Index");
             }
             return View(province);
+            //return View("xxx222");
         }
 
         // GET: Provinces/Delete/5
